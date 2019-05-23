@@ -28,6 +28,13 @@ export default class Index extends Component {
     console.log('clicked login')
     //Taro.request({'http://132.232.30.39:8000/v1/sso-server/form/token',newOptions});
   }
+
+  handleCounter() {
+    Taro.navigateTo({
+      url: `/pages/counter/index`
+    })
+  }
+
   render() {
     return (
       <View className='index'>
@@ -37,7 +44,8 @@ export default class Index extends Component {
         <View>用户名<Input></Input></View>
         <View>密码<Input type='password'></Input></View>
         <Button onClick={this.handleClick}>登录</Button>
+        <Button onClick={this.handleCounter}>计数器</Button>
       </View>
-  )
+    )
   }
-  }
+}

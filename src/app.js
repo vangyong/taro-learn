@@ -1,6 +1,9 @@
+import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
 import Index from './pages/index'
 
+import configStore from './store'
 import './app.less'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -9,11 +12,14 @@ import './app.less'
 //   require('nerv-devtools')
 // }
 
+const store = configStore()
+
 class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/counter/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -35,7 +41,9 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }
