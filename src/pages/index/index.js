@@ -1,5 +1,7 @@
 import Taro, {Component, request} from '@tarojs/taro'
 import {View, Input, Button} from '@tarojs/components'
+// import SnowflakeId from 'snowflake-id'
+// import IdGerator from '../../utils/IdGerator'
 import './index.less'
 import Head from '../components/head/head';
 
@@ -25,8 +27,11 @@ export default class Index extends Component {
   }
 
   handleClick() {
+    //let snowflake = new SnowflakeId({mid : 1, offset : 1})
     console.log('clicked login')
     //Taro.request({'http://132.232.30.39:8000/v1/sso-server/form/token',newOptions});
+    // let id = IdGerator.generateSnowflakeId()
+    // console.log(id)
   }
 
   handleCounter() {

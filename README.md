@@ -1,5 +1,10 @@
 1、安装环境
 npm install -g @tarojs/cli  或 yarn global add @tarojs/cli
+更新版本
+taro update self
+taro update project
+查看版本
+taro -v 
 
 2、初始化项目
 taro init app
