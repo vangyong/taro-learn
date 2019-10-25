@@ -25,3 +25,11 @@ this.setState({name:"张三"},()=>{
 自定义组件接收的来自父组件的传值
 props 是只读的
 当props的传值是函数时 必须用on+函数名的规范来命名
+
+6、nativa 环境
+* npm install -g expo-cli
+* git clone https://github.com/NervJS/taro-native-shell.git
+* npm install
+* react-native run-android
+* react-native run-ios
+
