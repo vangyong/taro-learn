@@ -14,6 +14,7 @@ npm run dev:h5 WEB
 npm run dev:weapp 微信
 npm run dev:swan 百度
 npm run dev:alipay 支付宝
+npm run dev:rn 
 
 4、基于state的数据管理
 (1)更新数据一定是异步
@@ -26,10 +27,15 @@ this.setState({name:"张三"},()=>{
 props 是只读的
 当props的传值是函数时 必须用on+函数名的规范来命名
 
-6、nativa 环境
+6、native 环境
 * npm install -g expo-cli
 * git clone https://github.com/NervJS/taro-native-shell.git
 * npm install
 * react-native run-android
 * react-native run-ios
 
+7、问题处理
+* Unexpected end of JSON
+* npm install --registry=https://registry.npm.taobao.org --loglevel=silly
+* npm cache clean --force
+* npm install
